@@ -16,3 +16,23 @@ Infrastructure as Code definition for the VM that I use to connect to customers'
 - Idea: Use Azure Calculator to generate a forecast of how much a deployment template is going to cost
 - Bicep cannot be used to deploy Helm charts in clusters directly, so it would involve creating a separate script to install the necessary charts (which can also be done declaratively)
 - Bicep can be installed by getting the VSCode Extension + `az install bicep` (or `choco install bicep`)
+
+## Learning Path: Building your first Bicep Template
+
+**Link:** https://learn.microsoft.com/pt-br/training/modules/build-first-bicep-template/1-introduction
+
+- Bicep is deployed with:
+
+`az deployment group create --template-file main.bicep`
+
+- Deployment groups' statuses can be checked with:
+
+`az deployment group list -o table`
+
+- Some common parameters accross resources:
+  - name
+  - location
+  - sku (pricing tier)
+  - properties
+
+**checkpoint:** https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables
