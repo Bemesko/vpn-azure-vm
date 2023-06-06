@@ -36,3 +36,14 @@ Infrastructure as Code definition for the VM that I use to connect to customers'
   - properties
 
 **checkpoint:** https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables
+
+- 3 ways to store data in templates:
+  - Parameters for when something needs to change each deployment
+    - `param appServiceName string = 'toy-product-launch-1'`
+  - Variables for when something doesn't always need to change in each deployment
+    - `var appServiceName = 'toy-product-launch-1'`
+    - Doesn't need a type
+  - Expressions to combine both into complex structures
+    - `param location string = resourceGroup().location`
+
+**checkpoint:** https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables#selecting-skus-for-resources
