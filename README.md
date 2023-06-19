@@ -47,3 +47,15 @@ Infrastructure as Code definition for the VM that I use to connect to customers'
     - `param location string = resourceGroup().location`
 
 **checkpoint:** https://learn.microsoft.com/en-us/training/modules/build-first-bicep-template/5-add-flexibility-parameters-variables#selecting-skus-for-resources
+
+- Adding allowed parameter values:
+
+```bicep
+@allowed([
+  'nonprod'
+  'prod'
+])
+param environmentType string
+```
+
+- `uniqueString(resourceGroup().id)` is a common way to generate uniqueStrings for each deployment
